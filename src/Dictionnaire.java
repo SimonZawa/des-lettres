@@ -4,17 +4,21 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Dictionnaire {
+
     private Set<String> ensembleMot;
 
     public Dictionnaire(ArrayList<String> mots) {
 
-        this.ensembleMot = new HashSet<>(); //On rajoute les mots dans le HashSet
+        this.ensembleMot = new HashSet<>();//On rajoute les mots dans le HashSet
+
         for (String mot : mots) {
+
             this.ensembleMot.add(mot);
         }
     }
 
     public boolean estValide(String mot) {
+
         return this.ensembleMot.contains(mot.toUpperCase());
     }
 
@@ -44,6 +48,7 @@ public class Dictionnaire {
         for (char lettre : lettres.toCharArray()) {
 
             if (Character.isLetter(lettre)) {
+
                 compte[lettre - 'A']++;
             }
         }

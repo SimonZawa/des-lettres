@@ -21,9 +21,11 @@ public class Tirage {
         SecureRandom random = new SecureRandom();
 
         for (int i = 0; i < nbreVoyelles; i++) { //Tirage des voyelles
+
             this.lettresTirees.add(voyelles.get(((random.nextInt(voyelles.size())))));
         }
         for (int i = 0; i < (10 - nbreVoyelles); i++) { //Tirage des consonnes
+
             this.lettresTirees.add(consonnes.get(((random.nextInt(consonnes.size())))));
         }
 
@@ -31,8 +33,11 @@ public class Tirage {
     }
 
     public String getLettres(ArrayList<String> lettresTirees) {
+
         String lettres = "";
+
         for (String i: lettresTirees) {
+
             lettres += i; //On stocke le tirage dans une variable, pour trouver le mot le plus long
         }
         return lettres;
